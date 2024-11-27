@@ -10,7 +10,7 @@ function calculateAge() {
     alert("Please enter your birthday");
   } else {
     // hitung umur make fungsi getAge
-    const age = getAge(birthdayValue);
+    const age = getAge(birthdayValue); 
     resultEl.innerText = `Your age is ${age} ${age > 1 ? "years" : "year"} old`;
   }
 }
@@ -26,7 +26,7 @@ function getAge(birthdayValue) {
     month < 0 ||
     (month === 0 && currentDate.getDate() < birthdayDate.getDate())
   ) {
-    age--;
+    age--; 
   }
 
   return age;
