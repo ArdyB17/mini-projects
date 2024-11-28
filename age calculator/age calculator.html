@@ -11,13 +11,18 @@
     <div class="container">
         <h1>Age Calculator</h1>
         <div class="form">
-            <label for="birthday">Enter you date of birth</label>
-            <input type="date" id="birthday" name="birthday">
+            <label for="birthday">Enter your date of birth:</label>
+            <input type="date" id="birthday" name="birthday" required>
             <button id="btn">Calculate Age</button>
-            <p id="result">Your age is 21 years old</p>
+            <p id="result" class="hidden">Your age is <span id="age"></span> years old.</p>
+            <button id="resetBtn" class="hidden">Reset</button>
+        </div>
+        <div class="fun-facts hidden">
+            <h2>Fun Facts About Your Age</h2>
+            <ul id="funFactsList"></ul>
         </div>
     </div>
 
-   <script src="script age calculator.js"></script>
+    <script src="script age calculator.js"></script>
 </body>
 </html>
