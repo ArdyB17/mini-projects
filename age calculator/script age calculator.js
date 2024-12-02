@@ -9,15 +9,17 @@ const funFactsList = document.getElementById("funFactsList");
 // Function to calculate age based on user input
 function calculateAge() {
     const birthdayValue = birthdayEl.value; // Get the user's birthday input
-    if (birthdayValue === "") {
-        alert("Please enter your birthday"); // Alert if no date is entered
-    } else {
-        const age = getAge(birthdayValue); // Calculate age
-        ageEl.innerText = age; // Display age
-        resultEl.classList.add("show"); // Show the result
-        resetBtn.classList.remove("hidden"); // Show reset button
-        generateFunFacts(age); // Generate fun facts
+    if (!birthdayValue) {
+        // Display message if no date is entered
+        resultEl.innerText = "Please enter your birthday.";
+        resultEl.classList.add("show");
+        return;
     }
+    const age = getAge(birthdayValue); // Calculate age
+    ageEl.innerText = age; // Display age
+    resultEl.classList.add("show"); // Show the result
+    resetBtn.classList.remove("hidden"); // Show reset button
+    generateFunFacts(age); // Generate fun facts
 }
 
 // Function to calculate age accurately
@@ -55,8 +57,10 @@ function generateFunFacts(age) {
         funFactsList.appendChild(li);
     });
 
-    // Show fun facts section
-    document.querySelector('.fun-facts').classList.remove('hidden');
+    // Show fun facts section with animation
+    const funFactsSection = document.querySelector('.fun-facts');
+    funFactsSection.classList.remove('hidden');
+    funFactsSection.style.animation = 'slideIn 0.5s ease-in-out'; // Trigger animation
 }
 
 // Function to reset the form

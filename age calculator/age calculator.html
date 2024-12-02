@@ -10,13 +10,13 @@
 <body>
     <div class="container">
         <h1>Age Calculator</h1>
-        <div class="form">
+        <main class="form">
             <label for="birthday">Enter your date of birth:</label>
             <input type="date" id="birthday" name="birthday" required>
-            <button id="btn">Calculate Age</button>
-            <p id="result" class="hidden">Your age is <span id="age"></span> years old.</p>
-            <button id="resetBtn" class="hidden">Reset</button>
-        </div>
+            <button id="btn" aria-label="Calculate Age">Calculate Age</button>
+            <p id="result" class="hidden" aria-live="polite">Your age is <span id="age"></span> years old.</p>
+            <button id="resetBtn" class="hidden" aria-label="Reset">Reset</button>
+        </main>
         <div class="fun-facts hidden">
             <h2>Fun Facts About Your Age</h2>
             <ul id="funFactsList"></ul>
