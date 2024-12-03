@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style loan.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Loan Calculator</h1>
+        <form id="loan-form">
+            <label for="loan-amount">Loan Amount ($)</label>
+            <input type="number" id="loan-amount" min="1" max="500000" value="10000" required>
+
+            <label for="interest-rate">Interest Rate (%)</label>
+            <input type="number" id="interest-rate" min="0" max="100" value="10" step=".1" required>
+
+            <label for="months-to-pay">Months to Pay</label>
+            <input type="number" id="months-to-pay" min="6" max="48" value="12" required>
+
+            <button type="button" id="calculate-btn">Calculate</button>
+            <button type="button" id="reset-btn">Reset</button>
+        </form>
+
+        <div class="results">
+            <p class="payment">Monthly Payment: $<span id="monthly-payment">0.00</span></p>
+            <p class="payment">Total Interest Paid: $<span id="total-interest">0.00</span></p>
+        </div>
+    </div>
+    <script src="script loan.js"></script>
+</body>
+
+</html>
