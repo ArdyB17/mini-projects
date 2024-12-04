@@ -44,7 +44,6 @@ function animateResults() {
     }, 1000);
 }
 
-
 // CSS for fade-in animation
 const style = document.createElement('style');
 style.innerHTML = `
