@@ -1,0 +1,94 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Landing Page Styles */
+.landing-page {
+    background: url('./pink-background.jpg') no-repeat center center fixed; /* Heart background image */
+    background-size: cover; /* Cover the entire area */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* White text for contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+}
+
+h1 {
+    font-size: 3rem; /* Large heading */
+    margin: 0;
+    color: aquamarine;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+p {
+    font-size: 1.5rem; /* Subheading */
+    margin-top: 10px;
+    color: greenyellow;
+}
+
+/* Heart Animation Area */
+.heart-animation-area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Counter Styles */
+.counter {
+    position: absolute;
+    bottom: 20px; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #fff; /* White text */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for readability */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heart Styles */
+span {
+    background: url("./heart.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 6s linear;
+}
+
+/* Animation Keyframes for Hearts */
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+    100% {
+        transform: translate(-50%, -5000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
