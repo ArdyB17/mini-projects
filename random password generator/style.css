@@ -1,0 +1,132 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, #ff7e5f, #feb47b); /* Updated gradient */
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Container Styles */
+.container {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+/* Heading Styles */
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Box Styles */
+.inputBox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.inputBox span {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.inputBox span:hover {
+    color: #ffeb3b; /* Change color on hover */
+}
+
+.passBox {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #333; /* Dark text for contrast */
+}
+
+/* Slider Styles */
+input[type="range"] {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Row Styles */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.row p, .row label {
+    flex-basis: 70%;
+    font-size: 16px;
+}
+
+/* Checkbox Styles */
+.row input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* Button Styles */
+.genBtn {
+    border: none;
+    outline: none;
+    background-color: #4caf50; /* Green background */
+    padding: 12px 24px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.genBtn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .passBox {
+        font-size: 18px;
+    }
+
+    .genBtn {
+        font-size: 16px;
+    }
+}
